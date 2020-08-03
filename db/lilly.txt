@@ -1,0 +1,6 @@
+var lillies = [
+    { id:1001, type:"Asia", name:"Lollipop", colors:["Pink","White"], height:50, diam:10, price:40 },
+    { id:1002, type:"Asia", name:"Vermeer", colors:["Pink","White"], height:55, diam:13, price:45 },
+    { id:1003, type:"Asia", name:"Twosome", colors:["Yellow","Brown"], height:90, diam:10, price:40 },
+    { id:1004, type:"Asia", name:"Pearl Jessica", colors:["Coral"], height:90, diam:12, price:45 }
+];

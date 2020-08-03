@@ -1,0 +1,97 @@
+﻿<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width'>
+
+<head>
+<style>
+
+body {
+    background-image: url('img/zbackground.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0px;
+    horizontal-align: middle;
+    vertical-align: middle;
+}
+
+p, a {
+    text-decoration-line: none;
+    margin: 20px auto 20px;
+    text-align:center;
+    color: #110055;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.centralcard {
+    width: 20%;
+    min-width: 500px;
+    margin: auto;
+    padding: 10px 30px 10px;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    opacity: 80%;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    box-shadow:7px 8px 9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card1 {
+    width:90%;
+    margin:10px auto 10px;
+    color:#FFFFFF;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    /*box-shadow:7px 8px 9px 0px rgba(0, 0, 0, 0.25);*/
+    cursor:pointer;
+}
+
+.contactbtn {
+    position:absolute;
+    left: 5px;
+    top: 5px;
+    display:inline-block;
+    padding: 10px;
+    color: #110055;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+}
+
+</style>
+
+<script charset='UTF-8' src="ru/rulang.txt"></script>
+<script charset='UTF-8' src="db/contacts.txt"></script>
+<script charset='UTF-8' src="db/lilly.txt"></script>
+<script charset='UTF-8' src="db/daylilly.txt"></script>
+<script charset='UTF-8' src="wrapper.txt"></script>
+
+<script>
+
+var cont = "<b>" + words.contacts + "</b> <br><br> Татьяна, владелец <br>"+contacts1+"<br> Дмитрий, менеджер <br>"+contacts2;
+
+
+</script>
+
+</head>
+
+<body onload='makepage()'>
+
+<div style='width:50%; margin:auto;'>
+<p style='font-family:serif; font-size:250%;'>
+NAUMOV'S GARDEN 
+</p>
+<p>
+Электронный каталог цветов
+</p>
+<p>
+Внимание: данный сайт не является интернет-магазином. Информация на этом сайте актуальна относительно последней даты обновления базы данных. Для заказа обращайтесь к нам по ссылкам или номерам телефонов, указанным в разделе "Контакты"<br><br>.
+</p>
+</div>
+<div class='contactbtn' id='contactbtn' onclick='showcont()' style='font-family:sans-serif; cursor:pointer;'>
+</div>
+<div id='id1' style='width:100%; max-width:720px; margin:auto;'>
+
+</div>
+
+</body>

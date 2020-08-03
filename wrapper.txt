@@ -1,0 +1,95 @@
+﻿var mode=0; // 0 - select lilly or daylilly category
+            // 1 - view lillies
+            // 2 - view daylillies
+var contmode=0;
+
+var mode0html = "<table><tr><td><div class='card1' onclick='mode=1; makepage();'><img src='img/zlilly.jpg' style='width:100%;'><p>" + words.lillies + "</p></div></td><td><div class='card1' onclick='mode=2; makepage();'><img src='img/zdaylilly.jpg' style='width:100%;'><p>" + words.daylillies + "</p></div></td></tr></table>";
+
+var columns = 2;
+
+if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) ||
+ navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+    columns = 1;
+}
+
+function showcont(){
+    if(contmode==0){
+        document.getElementById('contactbtn').innerHTML = cont;
+        contmode=1;
+    } else {
+        document.getElementById('contactbtn').innerHTML = "<b>" + words.contacts + "</b>";
+        contmode=0;
+    }
+}
+
+function makepage() {
+    document.getElementById('contactbtn').innerHTML = "<b>" + words.contacts + "</b>";
+    var main = document.getElementById('id1');
+    if(mode==0) {
+        main.innerHTML = mode0html;
+    } else if(mode==1) {
+        main.innerHTML = assemble_lilies();
+    } else {
+        main.innerHTML = assemble_daylilies();
+    }
+}
+
+function assemble_lilies(){
+    var result = "<table>";
+    for(let i=0; i<lillies.length; i+=columns){
+        result += "<tr>";
+        for(let j=0; j<columns; j++){
+            result += "<td>";
+            if(i+j<lillies.length){
+                result += "<div class='card1'>";
+                result += "<img src='img/" + lillies[i+j].id + ".jpg' style='width:100%;'>";
+                result += "<p><b>" + lillies[i+j].name + "</b></p>";
+                let tp = lillies[i+j].type;
+                let tpstring = "";
+                if(tp=="Asia") tpstring = words.asias;
+                else if(tp=="LA") tpstring = words.las;
+                else if(tp=="OT") tpstring = words.ots;
+                else if(tp=="LO") tpstring = words.los;
+                else if(tp=="Tube") tpstring = words.ts;
+                result += "<p style='text-align:start; width:80%;'>";
+                result += words.id + ": " + lillies[i+j].id + "<br>";
+                result += words.type + ": " + tpstring + "<br>";
+                result += words.color + ": " + lillies[i+j].colors.toString() + " <br>";
+                result += words.height + ": " + lillies[i+j].height + " см <br>";
+                result += words.diam + ": " + lillies[i+j].diam + " см <br>";
+                result += words.price + ": <b>" + lillies[i+j].price + " грн </b><br>";
+                result += "</p></div>";
+            }
+            result += "</td>";
+        }
+        result += "</tr>";
+    }
+    result += "</table>";
+    return result;
+}
+
+function assemble_daylilies(){
+    var result = "<table>";
+    for(let i=0; i<daylillies.length; i+=columns){
+        result += "<tr>";
+        for(let j=0; j<columns; j++){
+            result += "<td>";
+            if(i+j<daylillies.length){
+                result += "<div class='card1'>";
+                result += "<img src='img/" + daylillies[i+j].id + ".jpg' style='width:100%;'>";
+                result += "<p><b>" + daylillies[i+j].name + "</b></p>";
+                result += "<p style='text-align:start; width:80%;'>";
+                result += words.id + ": " + daylillies[i+j].id + "<br>";
+                result += words.color + ": " + daylillies[i+j].colors.toString() + " <br>";
+                result += words.height + ": " + daylillies[i+j].height + " см <br>";
+                result += words.diam + ": " + daylillies[i+j].diam + " см <br>";
+                result += words.price + ": <b>" + daylillies[i+j].price + " грн </b><br>";
+                result += "</p></div>";
+            }
+            result += "</td>";
+        }
+        result += "</tr>";
+    }
+    result += "</table>";
+    return result;
+}

@@ -1,0 +1,96 @@
+﻿<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width'>
+
+<head>
+<style>
+
+body {
+    background-image: url('img/zbackground.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0px;
+    horizontal-align: middle;
+    vertical-align: middle;
+}
+
+p, a {
+    text-decoration-line: none;
+    margin: 20px auto 20px;
+    text-align:center;
+    color: #110055;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.centralcard {
+    width: 20%;
+    min-width: 500px;
+    margin: auto;
+    padding: 10px 30px 10px;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    opacity: 80%;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    box-shadow:7px 8px 9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card1 {
+    width:90%;
+    margin:10px auto 10px;
+    color:#FFFFFF;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    /*box-shadow:7px 8px 9px 0px rgba(0, 0, 0, 0.25);*/
+    cursor:pointer;
+}
+
+.contactbtn {
+    position:absolute;
+    left: 5px;
+    top: 5px;
+    display:inline-block;
+    padding: 10px;
+    color: #110055;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+}
+
+</style>
+
+<script charset='UTF-8' src="ua/ualang.txt"></script>
+<script charset='UTF-8' src="db/contacts.txt"></script>
+<script charset='UTF-8' src="db/lilly.txt"></script>
+<script charset='UTF-8' src="db/daylilly.txt"></script>
+<script charset='UTF-8' src="wrapper.txt"></script>
+
+<script>
+
+var cont = "<b>Контактна інформація</b> <br><br> Тетяна, власник <br>"+contacts1+"<br> Дмитро, менеджер <br>"+contacts2;
+
+</script>
+
+</head>
+
+<body onload='makepage()'>
+
+<div style='width:50%; margin:auto;'>
+<p style='font-family:serif; font-size:250%;'>
+NAUMOV'S GARDEN 
+</p>
+<p>
+Електронний каталог квітів
+</p>
+<p>
+Увага: даний сайт не є інтернет-магазином. Наявна на сайті інформація є актуальною відносно останньої дати оновлення та може відрізнятися від реальної. Для замовлення і/або отримання додаткової інформації звертайтесь до нас за посиланнями або номерами телефонів, що вказані в розділі "Контактна інформація"<br><br>.
+</p>
+</div>
+<div class='contactbtn' id='contactbtn' onclick='showcont()' style='font-family:sans-serif; cursor:pointer;'>
+</div>
+<div id='id1' style='width:100%; max-width:720px; margin:auto;'>
+
+</div>
+
+</body>

@@ -1,0 +1,6 @@
+﻿var contacts1 = "Kyivstar mobile: <br>+380680848852 <br>Facebook: <br><a href='https://www.facebook.com/profile.php?id=100034569586730'>Open link</a> <br>";
+
+var contacts2 = "Telegram: <br><a href='https://t.me/int_main_return_0'>t.me/int_main_return_0</a> <br>";
+
+
+
